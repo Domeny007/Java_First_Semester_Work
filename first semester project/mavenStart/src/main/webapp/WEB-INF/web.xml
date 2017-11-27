@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <welcome-file-list>
+
+        <welcome-file>index.jsp</welcome-file>
+
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>authorizationFilter</filter-name>
+        <filter-class>servlets.SessionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>sessionFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>sessionFilter</filter-name>
+        <filter-class>servlets.MainPageFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/views/user/personal-page.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/bind-actors</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/bind-directors</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/bind-genres</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/bind-countries</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/change-data</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/addReview</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/movie_content</url-pattern>
+    </filter-mapping>
+
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/movieList</url-pattern>
+    </filter-mapping>
+
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/add-movie</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/add-genre</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/add-country</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/directorList</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/director_content</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/add-director</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/add-actor</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/actorList</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>authorizationFilter</filter-name>
+        <url-pattern>/actor_content</url-pattern>
+    </filter-mapping>
+
+
+
+
+</web-app>
