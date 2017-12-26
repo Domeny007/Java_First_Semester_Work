@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/web-calculator-bootstrap-jsp-db" useHttpOnly="true">
+    <Resource
+       driverClassName="org.postgresql.Driver"
+       maxActive="100"
+       maxIdle="200"
+       maxWait="5000"
+       name="jdbc/inhw_history_db"
+       username="pgAdmin"
+       password="admin"
+       type="javax.sql.DataSource"
+       url="jdbc:postgresql://localhost:5432/calculator"
+       validationQuery="SELECT 1">
+    </Resource>
+</Context>
